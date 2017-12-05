@@ -1,0 +1,29 @@
+﻿{
+  "name": "extname",
+  "description": "extdesc.",
+  "version": "1.0",
+  "manifest_version": 2,
+
+  "background": {
+    "persistent": false,  
+  "scripts": [ "background.js" ]
+  },
+  "content_scripts": [
+    {
+      "matches": [ "http://*/*", "https://*/*" ],
+      "js": [ "jquery.js", "content.js" ]
+    }
+  ],
+    "browser_action":
+    {
+      "default_title": "testextclick.",
+      "default_popup": "popup.html"
+    },
+
+    "permissions":
+    [
+      "tabs",
+      "http://*/",
+      "https://*/"
+    ]
+}
